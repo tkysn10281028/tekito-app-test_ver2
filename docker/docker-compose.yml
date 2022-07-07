@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0.21
+    platform: linux/amd64
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: 'myapp'
+      MYSQL_PASSWORD: 'admin'
+      MYSQL_ROOT_PASSWORD: 'admin'
+      MYSQL_DATABASE: 'myapp'
